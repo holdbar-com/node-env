@@ -39,7 +39,7 @@
     "prepack": "npm run prepare && node ./bin/build.js",
     "prepublishOnly": "tsc && node ./bin/prepublish.js",
     "postpublish": "node ./bin/sync.js",
-    "postinstall": "tsc && node ./bin/install.js",
+    "postinstall": "npm run prepare && node ./bin/install.js",
     "postversion": "node ./bin/update.js"
   },
   "files": [
