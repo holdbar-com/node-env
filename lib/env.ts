@@ -38,7 +38,6 @@ export async function prepare() {
       copyFile(file, join('template', file))
     )
   );
-  console.log('Copied files: ', files);
   await writeFile(
     'template/gitignore',
     (await readFile('.gitignore', 'utf-8'))
