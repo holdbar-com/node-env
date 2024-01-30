@@ -16,7 +16,7 @@ import { vote } from './siblings.js';
 const dirs = ['.vscode', '.idea/codeStyles/', '.idea/inspectionProfiles/'];
 const files = [
   'eslint.config.js',
-  '.prettierrc.cjs',
+  //'.prettierrc.cjs',
   'tsconfig.json',
   '.vscode/settings.json',
   '.vscode/extensions.json',
