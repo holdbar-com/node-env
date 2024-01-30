@@ -6,4 +6,3 @@ node_modules/
 *.d.ts
 .timestamps.json
 test/results/
-template/
