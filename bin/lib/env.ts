@@ -22,9 +22,7 @@ export async function prepare() {
     await Promise.all(files.map(file => copyFile(file, join('template', file))))
     await writeFile(
         'template/gitignore',
-        (
-            await readFile('.gitignore', 'utf-8')
-        )
+        (await readFile('.gitignore', 'utf-8'))
             .split(EOL)
             .filter(l => !!l && l !== 'template/')
             .concat(...files, '.gitignore', '')
@@ -33,7 +31,7 @@ export async function prepare() {
 }
 
 export async function setup(targetDir: string) {
-    await Promise.all(dirs.map(dir => mkdir(join(targetDir, dir), { recursive: true })))
-    await Promise.all(files.map(file => copyFile(join('template', file), join(targetDir, file))))
-    await copyFile('template/gitignore', join(targetDir, '.gitignore'))
+    //await Promise.all(dirs.map(dir => mkdir(join(targetDir, dir), { recursive: true })))
+    //await Promise.all(files.map(file => copyFile(join('template', file), join(targetDir, file))))
+    //await copyFile('template/gitignore', join(targetDir, '.gitignore'))
 }
