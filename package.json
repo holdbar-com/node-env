@@ -16,7 +16,7 @@
         "@typescript-eslint/eslint-plugin": "5.45.1",
         "@typescript-eslint/parser": "5.45.1",
         "cspell-lib": "6.17.0",
-        "eslint": "8.29.0",
+        "eslint": "8.53.0",
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-promise": "6.1.1",
@@ -34,7 +34,7 @@
     "scripts": {
         "watch": "tsc && node ./bin/prepare.js && node ./bin/install.js && node ./bin/watch.js",
         "prepare": "tsc && eslint && node ./bin/prepare.js",
-        "postinstall": "node ./bin/install.js"
+        "postinstall": "tsc && node ./bin/install.js"
     },
     "files": [
         "template/**",

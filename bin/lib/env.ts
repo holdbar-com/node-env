@@ -30,7 +30,7 @@ export async function prepare() {
     )
 }
 
-export async function setup(targetDir: string) {
+export async function setup(_targetDir: string) {
     //await Promise.all(dirs.map(dir => mkdir(join(targetDir, dir), { recursive: true })))
     //await Promise.all(files.map(file => copyFile(join('template', file), join(targetDir, file))))
     //await copyFile('template/gitignore', join(targetDir, '.gitignore'))
