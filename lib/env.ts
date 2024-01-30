@@ -40,6 +40,7 @@ export async function prepare() {
       }
     })
   );
+  console.log('Copied files: ', files);
   await writeFile(
     'template/gitignore',
     (await readFile('.gitignore', 'utf-8'))
