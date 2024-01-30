@@ -1,5 +1,5 @@
 import {} from 'node:url';
-
+/*
 const dirs = ['.vscode', '.idea/codeStyles/', '.idea/inspectionProfiles/'];
 const files = [
   '.eslintrc.json',
@@ -10,7 +10,7 @@ const files = [
   '.idea/compiler.xml',
   '.idea/codeStyles/codeStyleConfig.xml',
   '.idea/inspectionProfiles/Project_Default.xml',
-];
+];*/
 
 export async function prepare() {
   /*await rm('template', { recursive: true, force: true })
