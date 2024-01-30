@@ -34,11 +34,9 @@ export async function prepare() {
     dirs.map((dir) => mkdir(join('template', dir), { recursive: true }))
   );
   await Promise.all(
-    [...files, ...overridableFiles.map((f) => f[0])].map((file) => {
-      if (!existsSync(file)) {
-        copyFile(file, join('template', file));
-      }
-    })
+    [...files, ...overridableFiles.map((f) => f[0])].map((file) =>
+      copyFile(file, join('template', file))
+    )
   );
   console.log('Copied files: ', files);
   await writeFile(
@@ -59,7 +57,12 @@ export async function setup(targetDir: string) {
     dirs.map((dir) => mkdir(join(targetDir, dir), { recursive: true }))
   );
   await Promise.all(
-    files.map((file) => copyFile(join('template', file), join(targetDir, file)))
+    files.map((file) => {
+      const dest = join(targetDir, file);
+      if (!existsSync(dest)) {
+        copyFile(join('template', file), dest);
+      }
+    })
   );
   if (!targetDir.endsWith(join('riddance', 'node-env'))) {
     await copyFile('template/gitignore', join(targetDir, '.gitignore'));
