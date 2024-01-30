@@ -13,12 +13,7 @@ import { EOL } from 'node:os';
 import { join } from 'node:path';
 import { vote } from './siblings.js';
 
-const dirs = [
-  '.vscode',
-  '.devcontainer',
-  '.idea/codeStyles/',
-  '.idea/inspectionProfiles/',
-];
+const dirs = ['.vscode', '.idea/codeStyles/', '.idea/inspectionProfiles/'];
 const files = [
   '.editorconfig',
   'eslint.config.js',
@@ -30,12 +25,7 @@ const files = [
   '.idea/codeStyles/codeStyleConfig.xml',
   '.idea/inspectionProfiles/Project_Default.xml',
 ];
-const overridableFiles: [string, (content: string) => boolean][] = [
-  [
-    'Dockerfile.integration',
-    (content) => content.startsWith('# Maintained by @riddance/env\n'),
-  ],
-];
+const overridableFiles: [string, (content: string) => boolean][] = [];
 const legacyFiles = ['.prettierrc', '.prettierrc.json', '.eslintrc.json'];
 
 export async function prepare() {
@@ -56,7 +46,7 @@ export async function prepare() {
     (await readFile('.gitignore', 'utf-8'))
       .split('\n')
       .filter((l) => !!l && l !== 'template/')
-      .concat(...files, '.gitignore', '')
+      .concat(...files, '')
       .join('\n')
   );
 }
