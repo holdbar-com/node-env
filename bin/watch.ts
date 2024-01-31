@@ -17,11 +17,7 @@ let lastInput: string[] = [];
 function start() {
   watcher = watch(async (success, inputFiles, outputFiles) => {
     // If we're in a 'package-lock'-loop, break it.
-    if (
-      inputFiles.length === 1 &&
-      inputFiles[0] === 'package-lock.json' &&
-      lastInput.includes('package-lock.json')
-    ) {
+    if (inputFiles.length === 1 && inputFiles[0] === 'package-lock.json') {
       return;
     }
     if (
