@@ -18,8 +18,9 @@ function start() {
   watcher = watch(async (success, inputFiles, outputFiles) => {
     console.log('Files changed: ', inputFiles);
     if (
-      inputFiles.includes('package.json') ||
-      inputFiles.includes('package-lock.json')
+      (inputFiles.includes('package.json') ||
+        inputFiles.includes('package-lock.json')) &&
+      !lastInput.includes('package-lock.json')
     ) {
       await installAndRestart();
       return;
