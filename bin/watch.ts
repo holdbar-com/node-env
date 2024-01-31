@@ -16,11 +16,17 @@ let lastInput: string[] = [];
 
 function start() {
   watcher = watch(async (success, inputFiles, outputFiles) => {
-    console.log('Files changed: ', inputFiles);
+    // If we're in a 'package-lock'-loop, break it.
     if (
-      (inputFiles.includes('package.json') ||
-        inputFiles.includes('package-lock.json')) &&
-      !lastInput.includes('package-lock.json')
+      inputFiles.length === 1 &&
+      inputFiles[0] === 'package-lock.json' &&
+      lastInput.includes('package-lock.json')
+    ) {
+      return;
+    }
+    if (
+      inputFiles.includes('package.json') ||
+      inputFiles.includes('package-lock.json')
     ) {
       await installAndRestart();
       return;
