@@ -1,4 +1,4 @@
-import {} from 'node:url';
+import { } from 'node:url'
 /*
 const dirs = ['.vscode', '.idea/codeStyles/', '.idea/inspectionProfiles/'];
 const files = [
