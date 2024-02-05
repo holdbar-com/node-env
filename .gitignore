@@ -1,8 +1,6 @@
 .DS_Store
 .idea/
 node_modules/
-*.js
-!eslint.config.js
 *.js.map
 *.d.ts
 .timestamps.json
