@@ -1,13 +1,12 @@
 #!/usr/bin/env node
-
-import { readFile, rm, stat, writeFile } from 'node:fs/promises';
-import { dirname, extname } from 'node:path';
-import { watch } from './lib/compiler.js';
-import { formatted } from './lib/formatter.js';
-import { clearCache, lint } from './lib/linter.js';
-import { install } from './lib/npm.js';
-import { isDictionary, spelling } from './lib/spelling.js';
-import { test } from './lib/tester.js';
+import { readFile, rm, stat, writeFile } from 'node:fs/promises'
+import { dirname, extname } from 'node:path'
+import { watch } from './lib/compiler.js'
+import { formatted } from './lib/formatter.js'
+import { clearCache, lint } from './lib/linter.js'
+import { install } from './lib/npm.js'
+import { isDictionary, spelling } from './lib/spelling.js'
+import { test } from './lib/tester.js'
 
 const timestamps = await loadTimestamps();
 
