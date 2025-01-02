@@ -28,11 +28,10 @@
     "mocha": "10.2.0",
     "prettier": "3.0.3",
     "source-map-support": "0.5.21",
-    "typescript": "5.2.2"
-  },
-  "devDependencies": {
+    "typescript": "5.2.2",
     "@types/eslint": "8.44.6"
   },
+  "devDependencies": {},
   "scripts": {
     "prepare": "tsc -p ./tsconfig.json && node ./bin/prepare.js",
     "start": "npm run prepare && node ./bin/install.js && node ./bin/watch.js",
