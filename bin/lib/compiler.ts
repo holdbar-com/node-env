@@ -5,7 +5,7 @@ export function watch(
   filesChanged: (
     success: boolean,
     inputFiles: string[],
-    outputFiles: string[]
+    outputFiles: string[] | undefined
   ) => Promise<void>
 ): { close: () => void } {
   const watchFile = ts.sys.watchFile?.bind(ts.sys);

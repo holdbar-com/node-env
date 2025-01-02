@@ -1,6 +1,6 @@
 {
   "name": "@riddance/env",
-  "version": "0.0.11",
+  "version": "0.4.3",
   "type": "module",
   "keywords": [
     "riddance",
@@ -9,39 +9,50 @@
     "opinionated"
   ],
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "@tsconfig/node18": "^18.2.2",
-    "@types/mocha": "10.0.6",
     "@types/node": "^18",
-    "@typescript-eslint/eslint-plugin": "6.20.0",
-    "@typescript-eslint/parser": "6.20.0",
-    "cspell-lib": "8.3.2",
-    "eslint": "8.56.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prefer-arrow": "1.2.3",
+    "@types/mocha": "10.0.3",
+    "@tsconfig/node18": "18.2.2",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
+    "@typescript-eslint/parser": "6.10.0",
+    "cspell-lib": "7.3.8",
+    "eslint": "8.53.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-n": "16.2.0",
     "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-unicorn": "50.0.1",
+    "eslint-plugin-unicorn": "49.0.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
     "mocha": "10.2.0",
-    "prettier": "3.2.5",
+    "prettier": "3.0.3",
     "source-map-support": "0.5.21",
-    "typescript": "5.3.3"
+    "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/eslint": "8.4.10",
-    "@types/prettier": "2.7.1"
+    "@types/eslint": "8.44.6"
   },
   "scripts": {
-    "watch": "tsc && node ./bin/prepare.js && node ./bin/install.js && node ./bin/watch.js",
-    "prepare": "tsc && eslint && node ./bin/prepare.js",
-    "postinstall": "node ./bin/install.js"
+    "prepare": "tsc && node ./bin/prepare.js",
+    "start": "npm run prepare && node ./bin/install.js && node ./bin/watch.js",
+    "prepack": "npm run prepare && node ./bin/build.js",
+    "prepublishOnly": "tsc && node ./bin/prepublish.js",
+    "postpublish": "node ./bin/sync.js",
+    "postinstall": "npm run prepare && node ./bin/install.js",
+    "postversion": "node ./bin/update.js"
   },
   "files": [
     "template/**",
+    "*.js",
+    "lib/*.js",
     "bin/*.js",
     "bin/lib/*.js"
   ],
   "bin": {
-    "riddance-watch": "./bin/watch.js"
+    "riddance-watch": "./bin/watch.js",
+    "riddance-build": "./bin/build.js",
+    "riddance-prepublish": "./bin/prepublish.js",
+    "riddance-sync": "./bin/sync.js"
   }
 }

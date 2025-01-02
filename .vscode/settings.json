@@ -3,18 +3,16 @@
     ".idea/": true,
     "template/": true,
     "LICENSE": true,
-    ".gitignore": true,
-    "tsconfig.json": true,
     "node_modules/": true,
     "package-lock.json": true,
-    "dictionary.txt": true,
-    ".vscode": true,
-    ".eslintrc.json": true,
-    ".prettierrc": true,
     ".timestamps.json": true,
+    ".vscode/": true,
+    ".devcontainer/": true,
+    "Dockerfile.integration": true,
     "**/*.js": true,
     "**/*.d.ts": true
   },
+  "files.eol": "\n",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifierEnding": "js",
   "typescript.format.semicolons": "remove",
@@ -37,5 +35,6 @@
       "description": "Words used in this project",
       "addWords": true
     }
-  }
+  },
+  "cSpell.words": ["camelcase", "postpublish"]
 }
