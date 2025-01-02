@@ -48,8 +48,7 @@
     "lib/*.js",
     "bin/*.js",
     "bin/lib/*.js",
-    ".prettierrc.cjs",
-    "tsconfig.json"
+    ".prettierrc.cjs"
   ],
   "bin": {
     "riddance-watch": "./bin/watch.js",
