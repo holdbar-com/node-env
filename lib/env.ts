@@ -20,9 +20,6 @@ const files = [
   'tsconfig.json',
   '.vscode/settings.json',
   '.vscode/extensions.json',
-  '.idea/compiler.xml',
-  '.idea/codeStyles/codeStyleConfig.xml',
-  '.idea/inspectionProfiles/Project_Default.xml',
 ];
 const overridableFiles: [string, (content: string) => boolean][] = [];
 const legacyFiles = ['.prettierrc', '.prettierrc.json', '.eslintrc.json'];
