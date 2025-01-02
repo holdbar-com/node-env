@@ -1,9 +1,11 @@
 .DS_Store
 .idea/
 node_modules/
-!.prettierrc.cjs
-!eslint.config.js
+*.js
 *.js.map
 *.d.ts
 .timestamps.json
 test/results/
+template/
+!.prettierrc.cjs
+!eslint.config.js
