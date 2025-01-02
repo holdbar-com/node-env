@@ -22,5 +22,5 @@
     "noUnusedParameters": true
   },
   "include": ["**/*.ts"],
-  "exclude": ["example"]
+  "exclude": []
 }
