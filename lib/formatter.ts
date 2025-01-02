@@ -13,7 +13,7 @@ export async function formatted(
       Promise.all([
         readFile(join(path, file)),
         resolveConfig(join(path, file), {
-          config: '.prettierrc.json',
+          config: '.prettierrc.cjs',
           editorconfig: true,
         }),
       ])
