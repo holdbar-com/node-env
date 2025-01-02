@@ -34,7 +34,7 @@
     "@types/eslint": "8.44.6"
   },
   "scripts": {
-    "prepare": "tsc && node ./bin/prepare.js",
+    "prepare": "tsc -p ./tsconfig.json && node ./bin/prepare.js",
     "start": "npm run prepare && node ./bin/install.js && node ./bin/watch.js",
     "prepack": "npm run prepare && node ./bin/build.js",
     "prepublishOnly": "tsc && node ./bin/prepublish.js",
