@@ -47,6 +47,7 @@
     "lib/*.ts",
     "bin/*.ts",
     "bin/lib/*.ts",
+    "eslint.config.js",
     ".prettierrc.cjs",
     "tsconfig.json"
   ],
