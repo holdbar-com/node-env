@@ -1,6 +1,6 @@
 {
   "name": "@riddance/env",
-  "version": "0.4.3",
+  "version": "1.0.0",
   "type": "module",
   "keywords": [
     "riddance",
@@ -39,7 +39,8 @@
     "prepublishOnly": "tsc && node ./bin/prepublish.js",
     "postpublish": "node ./bin/sync.js",
     "postinstall": "npm run prepare && node ./bin/install.js",
-    "postversion": "node ./bin/update.js"
+    "postversion": "node ./bin/update.js",
+    "lint": "eslint"
   },
   "files": [
     "template/**",
