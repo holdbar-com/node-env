@@ -51,7 +51,7 @@ export function watch(
     filesChanged(
       diagnostics.length === 0,
       programBuilder.getSourceFiles().map((sf) => relative(dir, sf.fileName)),
-      emitResult.emittedFiles?.map((file) => relative(dir, file)) ?? []
+      emitResult.emittedFiles?.map((file) => relative(dir, file))
     ).catch((e) => {
       console.error('Error handling file changes:');
       console.error(e);
@@ -74,9 +74,7 @@ function dumpDiagnostic(diagnostic: ts.Diagnostic) {
       const { line, character } = diagnostic.file.getLineAndCharacterOfPosition(
         diagnostic.start
       );
-      message = `${diagnostic.file.fileName} (${line + 1},${
-        character + 1
-      }): ${message}`;
+      message = `${diagnostic.file.fileName} (${line + 1},${character + 1}): ${message}`;
     } else {
       message = `${diagnostic.file.fileName}: ${message}`;
     }
