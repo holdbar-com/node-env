@@ -18,7 +18,6 @@ const files = [
   'eslint.config.js',
   '.prettierrc.cjs',
   'tsconfig.json',
-  '.gitignore',
   '.vscode/settings.json',
   '.vscode/extensions.json',
 ];
@@ -41,7 +40,6 @@ export async function prepare() {
     (await readFile('.gitignore', 'utf-8'))
       .split('\n')
       .filter((l) => !!l && l !== 'template/')
-      .concat(...files, '')
       .join('\n')
   );
 }
