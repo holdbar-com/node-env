@@ -18,6 +18,7 @@ const files = [
   'eslint.config.js',
   '.prettierrc.cjs',
   'tsconfig.json',
+  '.gitignore',
   '.vscode/settings.json',
   '.vscode/extensions.json',
 ];
