@@ -44,10 +44,10 @@
   },
   "files": [
     "template/**",
-    "*.js",
-    "lib/*.js",
-    "bin/*.js",
-    "bin/lib/*.js",
+    "*.ts",
+    "lib/*.ts",
+    "bin/*.ts",
+    "bin/lib/*.ts",
     ".prettierrc.cjs",
     "tsconfig.json"
   ],
