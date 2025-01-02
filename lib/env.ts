@@ -40,6 +40,7 @@ export async function prepare() {
     [
       '.DS_Store',
       '.idea/',
+      '.vscode/',
       'node_modules/',
       '*.js',
       '*.js.map',
