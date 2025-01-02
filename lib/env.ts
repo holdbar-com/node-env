@@ -13,7 +13,7 @@ import { EOL } from 'node:os';
 import { join } from 'node:path';
 import { vote } from './siblings.js';
 
-const dirs = ['.vscode', '.idea/codeStyles/', '.idea/inspectionProfiles/'];
+const dirs = ['.vscode'];
 const files = [
   'eslint.config.js',
   '.prettierrc.cjs',

@@ -50,7 +50,8 @@
     "eslint.config.js",
     ".prettierrc.cjs",
     "tsconfig.json",
-    ".vscode/*.json"
+    ".vscode/*.json",
+    ".gitignore"
   ],
   "bin": {
     "riddance-watch": "./bin/watch.js",
