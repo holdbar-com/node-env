@@ -37,10 +37,18 @@ export async function prepare() {
   );
   await writeFile(
     'template/gitignore',
-    (await readFile('.gitignore', 'utf-8'))
-      .split('\n')
-      .filter((l) => !!l && l !== 'template/')
-      .join('\n')
+    [
+      '.DS_Store',
+      '.idea/',
+      'node_modules/',
+      '*.js',
+      '*.js.map',
+      '*.d.ts',
+      '.timestamps.json',
+      'test/results/',
+      '!.prettierrc.cjs',
+      '!eslint.config.js',
+    ].join('\n')
   );
 }
 
