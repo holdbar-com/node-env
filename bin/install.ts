@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { setup } from '../lib/env.js';
 
 const targetDir = process.argv[2] ?? process.env.INIT_CWD;

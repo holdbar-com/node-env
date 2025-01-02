@@ -13,16 +13,13 @@ import { EOL } from 'node:os';
 import { join } from 'node:path';
 import { vote } from './siblings.js';
 
-const dirs = ['.vscode', '.idea/codeStyles/', '.idea/inspectionProfiles/'];
+const dirs = ['.vscode'];
 const files = [
   'eslint.config.js',
-  //'.prettierrc.cjs',
+  '.prettierrc.cjs',
   'tsconfig.json',
   '.vscode/settings.json',
   '.vscode/extensions.json',
-  '.idea/compiler.xml',
-  '.idea/codeStyles/codeStyleConfig.xml',
-  '.idea/inspectionProfiles/Project_Default.xml',
 ];
 const overridableFiles: [string, (content: string) => boolean][] = [];
 const legacyFiles = ['.prettierrc', '.prettierrc.json', '.eslintrc.json'];
@@ -40,11 +37,18 @@ export async function prepare() {
   );
   await writeFile(
     'template/gitignore',
-    (await readFile('.gitignore', 'utf-8'))
-      .split('\n')
-      .filter((l) => !!l && l !== 'template/')
-      .concat(...files, '')
-      .join('\n')
+    [
+      '.DS_Store',
+      '.idea/',
+      'node_modules/',
+      '*.js',
+      '*.js.map',
+      '*.d.ts',
+      '.timestamps.json',
+      'test/results/',
+      '!.prettierrc.cjs',
+      '!eslint.config.js',
+    ].join('\n')
   );
 }
 

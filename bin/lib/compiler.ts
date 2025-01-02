@@ -74,9 +74,7 @@ function dumpDiagnostic(diagnostic: ts.Diagnostic) {
       const { line, character } = diagnostic.file.getLineAndCharacterOfPosition(
         diagnostic.start
       );
-      message = `${diagnostic.file.fileName} (${line + 1},${
-        character + 1
-      }): ${message}`;
+      message = `${diagnostic.file.fileName} (${line + 1},${character + 1}): ${message}`;
     } else {
       message = `${diagnostic.file.fileName}: ${message}`;
     }
