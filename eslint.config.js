@@ -2,7 +2,7 @@ import js from '@eslint/js';
 import ts from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import prettier from 'eslint-config-prettier';
-import node from 'eslint-plugin-node';
+import node from 'eslint-plugin-n';
 import preferArrow from 'eslint-plugin-prefer-arrow';
 import promise from 'eslint-plugin-promise';
 import unicorn from 'eslint-plugin-unicorn';

@@ -21,7 +21,7 @@
     "cspell-lib": "7.3.8",
     "eslint": "8.53.0",
     "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-node": "16.2.0",
+    "eslint-plugin-n": "16.2.0",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-unicorn": "49.0.0",
     "eslint-plugin-prefer-arrow": "1.2.3",
