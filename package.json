@@ -47,7 +47,8 @@
     "*.js",
     "lib/*.js",
     "bin/*.js",
-    "bin/lib/*.js"
+    "bin/lib/*.js",
+    ".prettierrc.cjs"
   ],
   "bin": {
     "riddance-watch": "./bin/watch.js",
